@@ -1,0 +1,24 @@
+{
+  "name": "my-web-hub",
+  "version": "1.0.0",
+  "description": "Multi-runtime web and SVG portal",
+  "main": "index.html",
+  "files": [
+    "index.html",
+    "index.svg",
+    "styles.css",
+    "app.js",
+    "sw.js"
+  ],
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "svg",
+    "pwa",
+    "github-pages",
+    "service-worker"
+  ],
+  "author": "YourName",
+  "license": "MIT"
+}
