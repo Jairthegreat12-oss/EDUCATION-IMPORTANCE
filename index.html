@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>App Hub</title>
+  <link rel="icon" type="image/svg+xml" href="./index.svg" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="background-glow"></div>
+  
+  <header class="navbar">
+    <div class="brand">
+      <span class="logo-dot"></span>
+      <span class="brand-title">CORE<span class="highlight">HUB</span></span>
+    </div>
+    <div class="status-indicator">
+      <span class="status-pulse"></span>
+      <span id="network-status">Online</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1 class="hero-title">Decentralized Web Interface</h1>
+      <p class="hero-subtitle">Dual-rendered via standard HTML5 and standalone vector SVG runtime.</p>
+    </section>
+
+    <div class="search-box">
+      <input type="text" id="app-search" placeholder="Search apps, tools, or links..." />
+    </div>
+
+    <section class="card-grid" id="card-container">
+      <!-- Cards rendered dynamically by app.js -->
+    </section>
+  </main>
+
+  <footer>
+    <p>Powered by GitHub Pages &amp; unpkg CDN runtime</p>
+  </footer>
+
+  <script src="./app.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./sw.js")
+          .then(reg => console.log("SW Registered:", reg.scope))
+          .catch(err => console.error("SW Registration failed:", err));
+      });
+    }
+  </script>
+</body>
+</html>
