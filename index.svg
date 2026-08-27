@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0b10" />
+      <stop offset="50%" stop-color="#12131c" />
+      <stop offset="100%" stop-color="#07080c" />
+    </linearGradient>
+  </defs>
+
+  <!-- Base background layer for SVG renderers -->
+  <rect width="100%" height="100%" fill="url(#bg-grad)" />
+
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="svg-root">
+      <style>
+        .svg-root {
+          width: 100%;
+          height: 100%;
+          box-sizing: border-box;
+          margin: 0;
+          padding: 24px;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+          color: #f3f4f6;
+          background: #0d0f17;
+          overflow-y: auto;
+        }
+        .header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-bottom: 20px;
+          border-bottom: 1px solid #1f2430;
+        }
+        .title {
+          font-size: 24px;
+          font-weight: 700;
+          letter-spacing: -0.5px;
+          color: #ffffff;
+        }
+        .title span { color: #6366f1; }
+        .grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+          gap: 16px;
+          margin-top: 24px;
+        }
+        .card {
+          background: #151824;
+          border: 1px solid #232936;
+          border-radius: 10px;
+          padding: 16px;
+          transition: transform 0.2s, border-color 0.2s;
+          cursor: pointer;
+        }
+        .card:hover {
+          transform: translateY(-2px);
+          border-color: #6366f1;
+        }
+        .card h3 {
+          margin: 0 0 8px 0;
+          font-size: 16px;
+          color: #e2e8f0;
+        }
+        .card p {
+          margin: 0;
+          font-size: 13px;
+          color: #94a3b8;
+          line-height: 1.4;
+        }
+        .btn {
+          margin-top: 12px;
+          display: inline-block;
+          padding: 6px 12px;
+          background: #4f46e5;
+          color: #ffffff;
+          border-radius: 6px;
+          text-decoration: none;
+          font-size: 12px;
+          font-weight: 600;
+        }
+      </style>
+
+      <div class="header">
+        <div class="title">CORE<span>HUB</span> // SVG Mode</div>
+        <div style="font-size: 12px; color: #10b981;">● Active Runtime</div>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Interactive Terminal</h3>
+          <p>Client-side execution sandbox running directly within the SVG viewport.</p>
+          <a class="btn" href="javascript:alert('Application loaded from SVG container.')">Launch App</a>
+        </div>
+        <div class="card">
+          <h3>Decentralized Proxy</h3>
+          <p>Integrated fetch and service-worker asset pipeline.</p>
+          <a class="btn" href="./index.html">Open Web Version</a>
+        </div>
+        <div class="card">
+          <h3>Package Distribution</h3>
+          <p>Hosted across npm, unpkg, jsDelivr, and GitHub Pages endpoints.</p>
+          <a class="btn" href="https://github.com" target="_blank">View Repository</a>
+        </div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>
